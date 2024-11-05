@@ -26,8 +26,8 @@ func main() {
 	http.HandleFunc("/", handlerIndex)
 	http.HandleFunc("/hello", handlerHello)
 
-	port := "19080"
-	log.Println("Info:", "Server started on http://localhost:"+port)
+	port := "80"
+	log.Println("Info:", "Server started on port:", port)
 	err := http.ListenAndServe(":"+port, nil)
 	if err != nil {
 		log.Fatalln("Error", "Server failed to start", err)
